@@ -1,0 +1,18 @@
+{
+  "name": "RaidPlanner",
+  "version": "1.0.0",
+  "description": "A raidplanner for the game Pokemon Go",
+  "main": "index.js",
+  "author": "Frederik OE",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.3.7",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
