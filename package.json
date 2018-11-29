@@ -1,5 +1,4 @@
 {
-  "name": "RaidPlanner",
   "version": "1.0.0",
   "description": "A raidplanner for the game Pokemon Go",
   "main": "index.js",
