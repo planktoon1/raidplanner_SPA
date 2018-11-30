@@ -1,5 +1,8 @@
-onload = async () => {  
-  const templateUrls = [
+onload = async () => {
+  
+  document.getElementById('app').innerHTML = raidplanner.Templates['public/templates/index.hbs']();
+  
+  /*const templateUrls = [
     '/templates/index.hbs',
     '/templates/partials/header.hbs',
     '/templates/partials/footer.hbs',
@@ -21,7 +24,7 @@ onload = async () => {
   })
 
   // Execute the compiled templates and insert them into the DOM
-  document.getElementById('app').innerHTML = indexTemplate({});
+  document.getElementById('app').innerHTML = indexTemplate({});*/
 };
 
 
