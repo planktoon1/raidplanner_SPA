@@ -7,12 +7,14 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    "public/templates.js": ["/templates/**/*.hbs"]
+                    "public/templates.js": ["./templates/**/*.hbs"]
                 }
             }
         }
       });
 
     grunt.loadNpmTasks('grunt-contrib-handlebars');
+
+    grunt.registerTask('default', ['handlebars']);
 
 }

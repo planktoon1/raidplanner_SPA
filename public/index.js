@@ -1,6 +1,6 @@
 onload = async () => {
   
-  document.getElementById('app').innerHTML = raidplanner.Templates['public/templates/index.hbs']();
+  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
   
   /*const templateUrls = [
     '/templates/index.hbs',
