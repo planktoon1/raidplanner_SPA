@@ -2,7 +2,7 @@ this["raidplanner"] = this["raidplanner"] || {};
 this["raidplanner"]["Templates"] = this["raidplanner"]["Templates"] || {};
 
 Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h2 class=\"title\">Pokemon Go | Raid planner</h2>";
+    return "<h1>Pokemon Go Raid planner</h1>\r\n<h3>@ Århus - Viby J</h3>";
 },"useData":true}));
 
 Handlebars.registerPartial("navigation", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -14,7 +14,7 @@ Handlebars.registerPartial("raidList", Handlebars.template({"compiler":[7,">= 4.
 },"useData":true}));
 
 Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h1>REGISTERRAIDREGISTERRAIDREGISTERRAIDREGISTERRAIDREGISTERRAID</h1>";
+    return "<h2>REGISTER RAID</h2><br>\r\n<p>Her kan man registrerer raids</p><br>\r\n<button>submit</button>\r\n<button>ok</button>";
 },"useData":true}));
 
 this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
