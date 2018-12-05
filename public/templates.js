@@ -12,7 +12,7 @@ Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.
 },"useData":true}));
 
 Handlebars.registerPartial("navigation", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<nav class=\"pokeballNav\">\r\n\r\n    \r\n</nav>";
+    return "<div class=\"pokeballNav\">\r\n    <nav>    \r\n        <button>POKEDÉX</button>\r\n        <button>Registrer Raid</button>\r\n        <button data-symbol=\"S\">Raid liste</button>\r\n\r\n        <button data-symbol=\"X\"></button>\r\n    </nav>\r\n</div>";
 },"useData":true}));
 
 Handlebars.registerPartial("account", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {

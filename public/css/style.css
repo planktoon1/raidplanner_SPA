@@ -85,7 +85,7 @@ button:active{ -webkit-filter: brightness(80%); }
 ---------------------NAVIGATION----------------------
 =====================================================*/
 .navigation {
-
+    
 }
 
 .pokeballNav {
@@ -97,6 +97,43 @@ button:active{ -webkit-filter: brightness(80%); }
     bottom: 20px;
     width: 4.6rem;
     height: 4.6rem;
+}
+
+.pokeballNav > nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(140deg,white, var(--limegreen)) no-repeat;
+}
+
+.pokeballNav button {
+    background: none;
+    -webkit-filter: brightness(100%);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--shamrock);
+    border: none;
+    min-width: 8em;
+    border-radius: 3em;
+    padding: 0.2em 1.2em;
+    margin-block-end: 4.4em;
+}
+.pokeballNav button::after {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 2.2em);
+    height: 4.4em;
+    width: 4.4em;
+    display: block;
+    background-image: url('/imgs/list_icon.png');
+    background-size: cover;
+    content: attr(data-symbol);
+    line-height: 4.4em;
 }
 
 @media(min-width: 749px){
