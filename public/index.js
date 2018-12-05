@@ -1,34 +1,31 @@
 onload = async () => {
+  registerHelpers();
+
+  changePageTo({
+    page: "account",
+    header: "Din profil",
+    subheader: "",
+    account: {
+      name: "Frederik",
+      age: "22"
+    }
+  });
   
-  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
-  
-  /*const templateUrls = [
-    '/templates/index.hbs',
-    '/templates/partials/header.hbs',
-    '/templates/partials/footer.hbs',
-    '/templates/partials/pages/registerRaid.hbs'
-  ];
-
-  const [
-    indexTemplate, 
-    headerPartial, 
-    footerPartial,
-    registerRaidPartial
-  ] = await fetchAndCompile(templateUrls);
-
-  // Register partials
-  Handlebars.registerPartial({
-    'header': headerPartial,
-    'footer': footerPartial,
-    'registerRaid': registerRaidPartial
-  })
-
-  // Execute the compiled templates and insert them into the DOM
-  document.getElementById('app').innerHTML = indexTemplate({});*/
 };
 
+function changePageTo(context) {
+  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs'](context);
+}
 
-// Fetches handlebars templates from an array of urls. Returns an array of the compiled templates
+function registerHelpers() {
+  // Handlebars helper that allows for comparrison inside template
+  Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  });
+
+}
+
+/*/ Fetches handlebars templates from an array of urls. Returns an array of the compiled templates
 // *The compiled templates are ordered in the same order as the urls are passed to the function   
 async function fetchAndCompile(urls) {
   // If the urls parameter is a single string/not an array, turn it into an array with 1 index
@@ -48,4 +45,4 @@ async function fetchAndCompile(urls) {
 
   // return the parsed templates as an array
   return compiledTemplates;
-}
+}*/

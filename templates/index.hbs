@@ -2,8 +2,12 @@
     {{#> header }} Something went wrong while trying to load the header {{/header}}
 </div>
 
-<div class="page">
-    {{#> registerRaid }} Something went wrong while trying to load the page {{/registerRaid}}
+<div id="page">
+    {{#ifEquals page "registerRaid" }}  {{> registerRaid }} {{else}}
+    {{#ifEquals page "raidList" }}      {{> raidList }}     {{else}}
+    {{#ifEquals page "account" }}       {{> account }}      {{else}}
+        <p>Page not found</p>
+    {{/ifEquals}}{{/ifEquals}}{{/ifEquals}}
 </div>
 
 <div class="navigation">

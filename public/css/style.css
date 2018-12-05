@@ -17,6 +17,39 @@ html {
 	padding: 0;
 }
 
+/*===================================================
+-----------------GENERAL PAGE STYLING----------------
+=====================================================*/
+#page {
+    
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+button{
+    background: linear-gradient(90deg, var(--limegreen), var(--shamrock));
+    -webkit-filter: brightness(100%);
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    min-width: 8em;
+    border-radius: 3em;
+    padding: 0.8em 1.2em;
+}
+button:hover{ -webkit-filter: brightness(95%);}
+button:active{ -webkit-filter: brightness(80%); }
 
 /*===================================================
 -----------------------HEADER------------------------
@@ -24,7 +57,7 @@ html {
 .header {
     position: relative;
     font-size: 1.3rem;
-    margin: 18px;
+    margin: 1rem;
     text-align: left;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 3em;
@@ -43,40 +76,6 @@ html {
     content: '';
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-/*===================================================
------------------GENERAL PAGE STYLING----------------
-=====================================================*/
-.page {
-    
-}
-
-button{
-    background: linear-gradient(90deg, var(--limegreen), var(--shamrock));
-    -webkit-filter: brightness(100%);
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: white;
-    border: none;
-    min-width: 8em;
-    border-radius: 3em;
-    padding: 0.8em 1.2em;
-}
-button:hover{ -webkit-filter: brightness(95%);}
-button:active{ -webkit-filter: brightness(80%); }
-
 /*===================================================
 --------------------REGISTER RAID--------------------
 =====================================================*/
@@ -94,10 +93,10 @@ button:active{ -webkit-filter: brightness(80%); }
     display: block; 
     background: url("/imgs/navbar_button.png") no-repeat;
     background-size: cover;
-    left: calc(50% - 2rem);
-    bottom: 35px;
-    width: 4rem;
-    height: 4rem;
+    left: calc(50% - 2.3rem);
+    bottom: 20px;
+    width: 4.6rem;
+    height: 4.6rem;
 }
 
 @media(min-width: 749px){
@@ -105,5 +104,5 @@ button:active{ -webkit-filter: brightness(80%); }
 }
 
 @media(max-width: 450px){
-    :root{ font-size: 14px;}
+    :root{ font-size: 12px;}
 }
