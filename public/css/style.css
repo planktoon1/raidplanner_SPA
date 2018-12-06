@@ -119,12 +119,12 @@ button:active{ -webkit-filter: brightness(80%); }
     grid-template-rows: 1fr repeat(3, auto) 2.5rem;
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas: 
-    ". . ."
-    ". account ."
+    ". .......  ."
+    ". account  ."
     ". register ."
     ". raidlist ."
-    ". . ."
-    ". close .";
+    ". ........ ."
+    ". close    .";
 }
 
 .pokeballNav .btnAccount {grid-area: account;}

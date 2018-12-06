@@ -13,6 +13,15 @@ onload = async () => {
   
 };
 
+function toggle(id) {
+  const element = document.getElementById(id);
+  if (element.style.display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }  
+}
+
 function changePageTo(context) {
   document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs'](context);
 }
