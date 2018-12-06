@@ -20,13 +20,17 @@ html {
 /*===================================================
 -----------------GENERAL PAGE STYLING----------------
 =====================================================*/
-#page {
+.page {
     
 }
 
 h1 {
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+@media(min-width: 749px){
+    h1 { font-size: 2rem; }
 }
 
 h2 {
@@ -37,7 +41,7 @@ h3 {
     font-size: 1rem;
 }
 
-button{
+.page button{
     background: linear-gradient(90deg, var(--limegreen), var(--shamrock));
     -webkit-filter: brightness(100%);
     text-transform: uppercase;
@@ -48,8 +52,6 @@ button{
     border-radius: 3em;
     padding: 0.8em 1.2em;
 }
-button:hover{ -webkit-filter: brightness(95%);}
-button:active{ -webkit-filter: brightness(80%); }
 
 /*===================================================
 -----------------------HEADER------------------------
@@ -99,8 +101,8 @@ button:active{ -webkit-filter: brightness(80%); }
     height: 4.6rem;
 }
 
-.pokeballNav > nav {
-    display: block;
+.navigation nav {
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -127,12 +129,13 @@ button:active{ -webkit-filter: brightness(80%); }
     ". close    .";
 }
 
-.pokeballNav .btnAccount {grid-area: account;}
-.pokeballNav .btnRegister {grid-area: register;}
-.pokeballNav .btnRaidList {grid-area: raidlist;}
-.pokeballNav .btnClose {grid-area: close;}
+.navGrid .btnAccount {grid-area: account;}
+.navGrid .btnRegister {grid-area: register;}
+.navGrid .btnRaidList {grid-area: raidlist;}
+.navGrid .btnClose {grid-area: close;}
 
-.pokeballNav button {
+.navGrid button {
+    -webkit-filter: brightness(100%);
     background: none;
     text-align: left;
     text-transform: uppercase;
@@ -146,7 +149,7 @@ button:active{ -webkit-filter: brightness(80%); }
     margin-left: 4.4em;
     margin-block-end: 2.2em;
 }
-.pokeballNav button::after {
+.navGrid button::after {
     position: absolute;
     top: calc(50% - 2.2em);
     right: 9.5em;
@@ -162,17 +165,16 @@ button:active{ -webkit-filter: brightness(80%); }
     line-height: 4.4em;
 }
 
-.pokeballNav .btnClose {font-size: 0.8rem;margin-left: 0; margin-block-end: 3rem}
-.pokeballNav .btnClose::after {
-    left: calc(50% - 2.2em);
-}
+
+button:hover{ -webkit-filter: brightness(95%);}
+button:active{ -webkit-filter: brightness(80%); }
+.navGrid .btnClose {font-size: 0.8rem;margin-left: 0; margin-block-end: 3rem}
+.navGrid .btnClose::after {left: calc(50% - 2.2em); }
 
 /*===================================================
 -------------------RESPONSIVENESS--------------------
 =====================================================*/
-@media(min-width: 749px){
-    :root{ font-size: 20px;}
-}
+
 
 @media(max-width: 450px){
     :root{ font-size: 12px;}

@@ -2,7 +2,7 @@
     {{#> header }} Something went wrong while trying to load the header {{/header}}
 </div>
 
-<div id="page">
+<div class="page">
     {{#ifEquals page "registerRaid" }}  {{> registerRaid }} {{else}}
     {{#ifEquals page "raidList" }}      {{> raidList }}     {{else}}
     {{#ifEquals page "account" }}       {{> account }}      {{else}}
@@ -11,5 +11,5 @@
 </div>
 
 <div class="navigation">
-{{#> navigation }} Something went wrong while trying to load the footer {{/navigation}}
+    {{#> navigation }} Something went wrong while trying to load the page navigation {{/navigation}}
 </div>

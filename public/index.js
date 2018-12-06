@@ -15,7 +15,7 @@ onload = async () => {
 
 function toggle(id) {
   const element = document.getElementById(id);
-  if (element.style.display === "none") {
+  if (!element.style.display || element.style.display === "none" ) {
     element.style.display = "block";
   } else {
     element.style.display = "none";
