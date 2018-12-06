@@ -106,27 +106,36 @@ button:active{ -webkit-filter: brightness(80%); }
     top: 0;
     width: 100%;
     height: 100%;
-
+    margin: auto;
     background: linear-gradient(140deg,white, var(--limegreen)) no-repeat;
 }
 
+.navGrid {
+    margin-block-start: 2rem;
+    position: relative;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr min-content 1fr;
+}
+
 .pokeballNav button {
+    grid-column: 2/3;
     background: none;
     -webkit-filter: brightness(100%);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--shamrock);
     border: none;
     min-width: 8em;
     border-radius: 3em;
-    padding: 0.2em 1.2em;
-    margin-block-end: 4.4em;
+    padding: 0.2em 1em;
+    margin-block-end: 2.2em;
 }
 .pokeballNav button::after {
     position: absolute;
-    top: 100%;
-    left: calc(50% - 2.2em);
+    top: calc(50% - 2.2em);
+    right: 7.5em;
     height: 4.4em;
     width: 4.4em;
     display: block;
