@@ -12,7 +12,7 @@ Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.
 },"useData":true}));
 
 Handlebars.registerPartial("navigation", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"pokeballNav\">\r\n    <nav>\r\n        <div class=\"navGrid\">\r\n            <button>POKEDÉX</button>\r\n            <button>Registrer Raid</button>\r\n            <button data-symbol=\"S\">Raid liste</button>\r\n\r\n            <button data-symbol=\"X\"></button>\r\n        </div>\r\n    </nav>\r\n</div>";
+    return "<div class=\"pokeballNav\">\r\n    <nav>\r\n        <div class=\"navGrid\">\r\n            <button class=\"btnAccount\" data-symbol=\"&#xf007\">Account</button>\r\n            <button class=\"btnRegister\" data-symbol=\"&#xf067\">Registrer Raid</button>\r\n            <button class=\"btnRaidList\" data-symbol=\"&#xf0ca\">Raid list</button>\r\n\r\n            <button class=\"btnClose\" data-symbol=\"&#xf00d\"></button>\r\n        </div>\r\n    </nav>\r\n</div>";
 },"useData":true}));
 
 Handlebars.registerPartial("account", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {

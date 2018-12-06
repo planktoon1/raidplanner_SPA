@@ -111,40 +111,65 @@ button:active{ -webkit-filter: brightness(80%); }
 }
 
 .navGrid {
-    margin-block-start: 2rem;
-    position: relative;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 1fr min-content 1fr;
+    grid-gap: 2.5rem;
+    grid-template-rows: 1fr repeat(3, auto) 2.5rem;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". account ."
+    ". register ."
+    ". raidlist ."
+    ". . ."
+    ". close .";
 }
 
+.pokeballNav .btnAccount {grid-area: account;}
+.pokeballNav .btnRegister {grid-area: register;}
+.pokeballNav .btnRaidList {grid-area: raidlist;}
+.pokeballNav .btnClose {grid-area: close;}
+
 .pokeballNav button {
-    grid-column: 2/3;
     background: none;
-    -webkit-filter: brightness(100%);
+    text-align: left;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
     color: var(--shamrock);
     border: none;
-    min-width: 8em;
+    min-width: 9.8em;
     border-radius: 3em;
-    padding: 0.2em 1em;
+    padding: 0.2em 1em 0.2em 1em;
+    margin-left: 4.4em;
     margin-block-end: 2.2em;
 }
 .pokeballNav button::after {
     position: absolute;
     top: calc(50% - 2.2em);
-    right: 7.5em;
+    right: 9.5em;
     height: 4.4em;
     width: 4.4em;
     display: block;
     background-image: url('/imgs/list_icon.png');
     background-size: cover;
-    content: attr(data-symbol);
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content:  attr(data-symbol);
     line-height: 4.4em;
 }
 
+.pokeballNav .btnClose {font-size: 0.8rem;margin-left: 0; margin-block-end: 3rem}
+.pokeballNav .btnClose::after {
+    left: calc(50% - 2.2em);
+}
+
+/*===================================================
+-------------------RESPONSIVENESS--------------------
+=====================================================*/
 @media(min-width: 749px){
     :root{ font-size: 20px;}
 }
