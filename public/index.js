@@ -15,10 +15,10 @@ onload = async () => {
 
 function toggle(id) {
   const element = document.getElementById(id);
-  if (!element.style.display || element.style.display === "none" ) {
-    element.style.display = "block";
+  if (!element.style.opacity || element.style.opacity === "0" ) {
+    element.style.opacity = "1";
   } else {
-    element.style.display = "none";
+    element.style.opacity = "0";
   }  
 }
 
