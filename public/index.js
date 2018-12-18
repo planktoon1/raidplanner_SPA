@@ -1,3 +1,56 @@
+// ---------------- ACCOUNT ----------------
+
+const createAccount = ({
+  name = 'Anonymous', 
+  age = 'Unknown',
+  area = 'Unknown',
+  city = 'Unknown'
+} = {}) => {
+  function haveFun() {
+    console.log(`${name} is having fun`)
+  }
+
+  return {
+    name,
+    age,
+    area,
+    city,
+    haveFun
+  }
+}
+
+// -------------- UTILITIES --------------
+
+// Toggles visibility of an element. Designed to be used inline in the html. 
+function toggle(id) {
+  const element = document.getElementById(id);
+  if (!element.style.opacity || element.style.opacity === "0" ) {
+    element.style.visibility = "visible";
+    element.style.opacity = "1";
+  } else {
+    element.style.visibility = "hidden";
+    element.style.opacity = "0";
+  }  
+}
+
+// Add event listener - takes care of older browsers
+function addEvent(element, evnt, funct){
+  if (element.attachEvent)
+   return element.attachEvent('on'+evnt, funct);
+  else
+   return element.addEventListener(evnt, funct, false);
+}
+
+
+function changePageTo(context) {
+  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs'](context);
+  registerEventListeners();
+}
+
+// ----------- INITIALIZATION ------------
+const account = createAccount({area: 'Viby J', city: 'Århus'});
+
+// When page is loaded..
 onload = async () => {
   registerHelpers();
 
@@ -5,25 +58,44 @@ onload = async () => {
     page: "account",
     header: "Din profil",
     subheader: "",
-    account: {
-      name: "Frederik",
-      age: "22"
-    }
+    account: account
   });
+
   
 };
 
-function toggle(id) {
-  const element = document.getElementById(id);
-  if (!element.style.opacity || element.style.opacity === "0" ) {
-    element.style.opacity = "1";
-  } else {
-    element.style.opacity = "0";
-  }  
-}
+// Adds eventlisteners to buttons, and other functionalities
+function registerEventListeners() {
 
-function changePageTo(context) {
-  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs'](context);
+  // ---------- Navigation buttons ----------
+  addEvent( // -- Account --
+    document.getElementById('btnAccount'), 'click', () => changePageTo({
+      page: "account",
+      header: "Din profil",
+      subheader: "",
+      account: account
+    })
+  );
+
+  addEvent( // -- Register raid --
+    document.getElementById('btnRegister'), 'click', () => changePageTo({
+      page: "registerRaid",
+      header: "Register Raid",
+      subheader: `@ ${account.area} - ${account.city}`,
+      account: account
+    })
+  );
+
+  addEvent( //  -- Raid list -- 
+    document.getElementById('btnRaidList'), 'click', () => changePageTo({
+      page: "raidList",
+      header: "Raid List",
+      subheader: `@ ${account.area} - ${account.city}`,
+      account: account
+    })
+  );
+
+
 }
 
 function registerHelpers() {
@@ -33,25 +105,3 @@ function registerHelpers() {
   });
 
 }
-
-/*/ Fetches handlebars templates from an array of urls. Returns an array of the compiled templates
-// *The compiled templates are ordered in the same order as the urls are passed to the function   
-async function fetchAndCompile(urls) {
-  // If the urls parameter is a single string/not an array, turn it into an array with 1 index
-  if (urls.constructor !== Array) {urls = [urls]};
-
-  // Fetch the templates needed
-  const fetchedTemplates = await Promise.all( urls.map( url => fetch(url)) );
-
-  // Read the response stream of the templates and parse them into text
-  const parsedTemplates = await Promise.all( fetchedTemplates.map( t => t.text()));
-
-  // Compile the templates
-  const compiledTemplates = [];
-  for (parsedTemplate of parsedTemplates) {
-    compiledTemplates.push( Handlebars.compile(parsedTemplate));
-  }
-
-  // return the parsed templates as an array
-  return compiledTemplates;
-}*/

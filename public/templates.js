@@ -12,7 +12,7 @@ Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.
 },"useData":true}));
 
 Handlebars.registerPartial("navigation", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<button class=\"pokeballNav\" onclick=\"toggle('navigation')\"></button>\r\n<nav id=\"navigation\">\r\n    <div class=\"navGrid\">\r\n        <button class=\"btnAccount\" data-symbol=\"&#xf007\">Account</button>\r\n        <button class=\"btnRegister\" data-symbol=\"&#xf067\">Registrer Raid</button>\r\n        <button class=\"btnRaidList\" data-symbol=\"&#xf0ca\">Raid list</button>\r\n\r\n        <button class=\"btnClose\" data-symbol=\"&#xf00d\" onclick=\"toggle('navigation')\"></button>\r\n    </div>\r\n</nav>";
+    return "<button class=\"pokeballNav\" onclick=\"toggle('navigation')\"></button>\r\n<nav id=\"navigation\">\r\n    <div class=\"navGrid\">\r\n        <button class=\"btnAccount\" id=\"btnAccount\"  data-symbol=\"&#xf007\">Account</button>\r\n        <button class=\"btnRegister\" id=\"btnRegister\" data-symbol=\"&#xf067\">Registrer Raid</button>\r\n        <button class=\"btnRaidList\" id=\"btnRaidList\" data-symbol=\"&#xf0ca\">Raid list</button>\r\n\r\n        <button class=\"btnClose\" data-symbol=\"&#xf00d\" onclick=\"toggle('navigation')\"></button>\r\n    </div>\r\n</nav>";
 },"useData":true}));
 
 Handlebars.registerPartial("account", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
@@ -22,6 +22,10 @@ Handlebars.registerPartial("account", Handlebars.template({"1":function(containe
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + " <br>\r\n    Alder: "
     + alias4(((helper = (helper = helpers.age || (depth0 != null ? depth0.age : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"age","hash":{},"data":data}) : helper)))
+    + "<br>\r\n    By: "
+    + alias4(((helper = (helper = helpers.city || (depth0 != null ? depth0.city : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"city","hash":{},"data":data}) : helper)))
+    + "<br>\r\n    Område: "
+    + alias4(((helper = (helper = helpers.area || (depth0 != null ? depth0.area : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"area","hash":{},"data":data}) : helper)))
     + "<br>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
