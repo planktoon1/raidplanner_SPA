@@ -60,8 +60,22 @@ h3 {
     min-width: 8em;
     border-radius: 3em;
     padding: 0.8em 1.2em;
-    height: auto;
+    height: 100%;
 }
+
+.page input[type=text] {
+    position: relative;
+    height: auto;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+  }
+.page input[type=text]::placeholder { color: lightgray; }
+
 
 
 /*===================================================
@@ -69,20 +83,54 @@ h3 {
 =====================================================*/
 .loginWrapper {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1fr auto 2fr;
+    grid-template-columns: auto;
+    grid-template-rows: 5rem auto 2fr;
 }
 
 .loginBox {
-    grid-column: 2/3;
+    position: relative;
     grid-row: 2/3;
     display: grid;
     grid-template-columns: auto;
-    padding: 1.4rem;
+    padding: 2rem;
+    padding-top: 5rem;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     grid-gap: 0.8rem;
-    width: 200px;
+    width: 100%;
+    box-sizing:border-box;
+}
+
+.loginBox::before {
+    position: absolute;
+    display: block;
+    top: -3rem;
+    left: calc(50% - 3rem);
+    width: 6rem;
+    height: 6rem;
+    background: linear-gradient(100deg, var(--limegreen), var(--shamrock));
+    border-radius: 6rem;
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f0c0';
+    line-height: 6rem;
+    font-size: 2.4rem;
+}
+
+.loginBox div { position: relative; }
+.loginBox input[type=text] { padding-left: 3.2rem; }
+
+.loginBox .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 1.4rem;
+    color: lightgray;
+    padding: 1rem 1.2rem;
+    box-sizing: border-box;
 }
 
 .loginBox .rememberMe {
@@ -99,7 +147,6 @@ h3 {
     margin-block-start: 1rem;
     border-block-start: 1px solid black;
     padding: 0.6rem;
-    grid-column: 2/3;
     grid-row: 3/4;
 }
 
