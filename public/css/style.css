@@ -41,6 +41,15 @@ h3 {
     font-size: 1rem;
 }
 
+.page button.subtle {
+    background: none;
+    min-width: auto;
+    color: black;
+    text-transform: none;
+    min-width: 0;
+    padding: 0;
+}
+
 .page button{
     background: linear-gradient(90deg, var(--limegreen), var(--shamrock));
     -webkit-filter: brightness(100%);
@@ -70,9 +79,28 @@ h3 {
     display: grid;
     grid-template-columns: auto;
     padding: 1.4rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     grid-gap: 0.8rem;
+    width: 200px;
+}
+
+.loginBox .rememberMe {
+    float: left;
+    height: 100%;
+}
+
+.loginBox .forgotpass {
+    float: right;
+    height: 19px;
+}
+
+.registerAccount {
+    margin-block-start: 1rem;
+    border-block-start: 1px solid black;
+    padding: 0.6rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
 }
 
 /*===================================================

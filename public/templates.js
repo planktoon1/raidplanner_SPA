@@ -36,7 +36,7 @@ Handlebars.registerPartial("account", Handlebars.template({"1":function(containe
 },"useData":true}));
 
 Handlebars.registerPartial("login", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"loginWrapper\">\r\n    <div class=\"loginBox\">\r\n        <h1>Log ind</h1>\r\n        <input type=\"text\">\r\n        <input type=\"text\">\r\n        <button>Login</button>\r\n        <div>\r\n            <input type=\"checkbox\" name=\"rememberMe\" id=\"rememberMe\"><button class=\"subtle\">Glemt kodeord?</button>\r\n        </div>\r\n    </div>\r\n    <p>Her kan man logge ind</p><br>\r\n</div>";
+    return "<div class=\"loginWrapper\">\r\n    <div class=\"loginBox\">\r\n        <input type=\"text\">\r\n        <input type=\"text\">\r\n        <button>Login</button>\r\n        <div>\r\n            <div class=\"rememberMe\"><input type=\"checkbox\" name=\"rememberMe\" id=\"rememberMe\">Husk mig </div>\r\n            <button class=\"subtle forgotpass\">Glemt kodeord?</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"registerAccount\">\r\n        <p>Har du ikke en bruger ? <button class=\"subtle\">OPRET HER</button></p>\r\n    </div>\r\n</div>";
 },"useData":true}));
 
 Handlebars.registerPartial("raidList", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
