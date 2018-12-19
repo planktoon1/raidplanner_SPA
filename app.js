@@ -23,7 +23,7 @@ app.use(session({
 // MONGODB & MONGOOSE SETUP
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
-mongoose.connect(config.localMongoDB, {useNewUrlParser: true});
+//mongoose.connect(config.localMongoDB, {useNewUrlParser: true});
 
 // ROUTES FOR THE APP
 const adminRouter = require('./routes/admin'); //TODO
