@@ -35,6 +35,10 @@ Handlebars.registerPartial("account", Handlebars.template({"1":function(containe
     + "<button>submit</button>\r\n<button>ok</button>";
 },"useData":true}));
 
+Handlebars.registerPartial("login", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"loginWrapper\">\r\n    <div class=\"loginBox\">\r\n        <h1>Log ind</h1>\r\n        <input type=\"text\">\r\n        <input type=\"text\">\r\n        <button>Login</button>\r\n        <div>\r\n            <input type=\"checkbox\" name=\"rememberMe\" id=\"rememberMe\"><button class=\"subtle\">Glemt kodeord?</button>\r\n        </div>\r\n    </div>\r\n    <p>Her kan man logge ind</p><br>\r\n</div>";
+},"useData":true}));
+
 Handlebars.registerPartial("raidList", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<p>Her kan man se en liste af raids</p><br>\r\n<button>submit</button>\r\n<button>ok</button>";
 },"useData":true}));
@@ -84,6 +88,17 @@ this["raidplanner"]["Templates"]["./templates/page.hbs"] = Handlebars.template({
     + ((stack1 = container.invokePartial(partials.account,depth0,{"name":"account","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
     + "      ";
 },"11":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "\r\n"
+    + ((stack1 = (helpers.ifEquals || (depth0 && depth0.ifEquals) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.page : depth0),"login",{"name":"ifEquals","hash":{},"fn":container.program(12, data, 0),"inverse":container.program(14, data, 0),"data":data})) != null ? stack1 : "");
+},"12":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "         "
+    + ((stack1 = container.invokePartial(partials.login,depth0,{"name":"login","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + "        ";
+},"14":function(container,depth0,helpers,partials,data) {
     return "\r\n    <p>Page not found</p>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;

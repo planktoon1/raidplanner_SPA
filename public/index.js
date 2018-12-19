@@ -56,9 +56,9 @@ onload = async () => {
   document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
 
   changePageTo({
-    page: "account",
-    header: "Din profil",
-    subheader: "",
+    page: "login",
+    header: "Login",
+    subheader: "For at oprette raid grupper, mm..",
     account: account
   });
 
