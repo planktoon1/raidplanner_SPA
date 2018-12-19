@@ -43,7 +43,7 @@ function addEvent(element, evnt, funct){
 
 
 function changePageTo(context) {
-  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs'](context);
+  document.getElementById('page').innerHTML = raidplanner.Templates['./templates/page.hbs'](context);
   registerEventListeners();
 }
 
@@ -53,6 +53,7 @@ const account = createAccount({area: 'Viby J', city: 'Århus'});
 // When page is loaded..
 onload = async () => {
   registerHelpers();
+  document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
 
   changePageTo({
     page: "account",

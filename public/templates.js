@@ -12,7 +12,7 @@ Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.
 },"useData":true}));
 
 Handlebars.registerPartial("navigation", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<button class=\"pokeballNav\" onclick=\"toggle('navigation')\"></button>\r\n<nav id=\"navigation\">\r\n    <div class=\"navGrid\">\r\n        <button class=\"btnAccount\" id=\"btnAccount\"  data-symbol=\"&#xf007\">Account</button>\r\n        <button class=\"btnRegister\" id=\"btnRegister\" data-symbol=\"&#xf067\">Registrer Raid</button>\r\n        <button class=\"btnRaidList\" id=\"btnRaidList\" data-symbol=\"&#xf0ca\">Raid list</button>\r\n\r\n        <button class=\"btnClose\" data-symbol=\"&#xf00d\" onclick=\"toggle('navigation')\"></button>\r\n    </div>\r\n</nav>";
+    return "<button class=\"pokeballNav\" onclick=\"toggle('navigation')\"></button>\r\n<nav id=\"navigation\">\r\n    <div class=\"navGrid\">\r\n        <button class=\"btnAccount\" id=\"btnAccount\"  data-symbol=\"&#xf007\" onclick=\"toggle('navigation')\">Account</button>\r\n        <button class=\"btnRegister\" id=\"btnRegister\" data-symbol=\"&#xf067\" onclick=\"toggle('navigation')\">Registrer Raid</button>\r\n        <button class=\"btnRaidList\" id=\"btnRaidList\" data-symbol=\"&#xf0ca\" onclick=\"toggle('navigation')\">Raid list</button>\r\n\r\n        <button class=\"btnClose\" data-symbol=\"&#xf00d\" onclick=\"toggle('navigation')\"></button>\r\n    </div>\r\n</nav>";
 },"useData":true}));
 
 Handlebars.registerPartial("account", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
@@ -44,6 +44,16 @@ Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">
 },"useData":true}));
 
 this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
+    return " Something went wrong while trying to load the page navigation ";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"page\" id=\"page\">\r\n   <!-- All page content goes here -->\r\n</div>\r\n\r\n<div class=\"navigation\">\r\n    "
+    + ((stack1 = container.invokePartial(partials.navigation,depth0,{"name":"navigation","fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + "\r\n</div>";
+},"usePartial":true,"useData":true});
+
+this["raidplanner"]["Templates"]["./templates/page.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
     return " Something went wrong while trying to load the header ";
 },"3":function(container,depth0,helpers,partials,data) {
     var stack1;
@@ -54,7 +64,7 @@ this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template(
 },"5":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "\r\n    "
+  return "\r\n"
     + ((stack1 = (helpers.ifEquals || (depth0 && depth0.ifEquals) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.page : depth0),"raidList",{"name":"ifEquals","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "");
 },"6":function(container,depth0,helpers,partials,data) {
     var stack1;
@@ -65,7 +75,7 @@ this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template(
 },"8":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "\r\n    "
+  return "\r\n"
     + ((stack1 = (helpers.ifEquals || (depth0 && depth0.ifEquals) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.page : depth0),"account",{"name":"ifEquals","hash":{},"fn":container.program(9, data, 0),"inverse":container.program(11, data, 0),"data":data})) != null ? stack1 : "");
 },"9":function(container,depth0,helpers,partials,data) {
     var stack1;
@@ -74,17 +84,12 @@ this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template(
     + ((stack1 = container.invokePartial(partials.account,depth0,{"name":"account","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
     + "      ";
 },"11":function(container,depth0,helpers,partials,data) {
-    return "\r\n        <p>Page not found</p>\r\n    ";
-},"13":function(container,depth0,helpers,partials,data) {
-    return " Something went wrong while trying to load the page navigation ";
+    return "\r\n    <p>Page not found</p>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
   return "<div class=\"header\">    \r\n    "
     + ((stack1 = container.invokePartial(partials.header,depth0,{"name":"header","fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
-    + "\r\n</div>\r\n\r\n<div class=\"page\">\r\n    "
-    + ((stack1 = (helpers.ifEquals || (depth0 && depth0.ifEquals) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.page : depth0),"registerRaid",{"name":"ifEquals","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "")
-    + "\r\n</div>\r\n\r\n<div class=\"navigation\">\r\n    "
-    + ((stack1 = container.invokePartial(partials.navigation,depth0,{"name":"navigation","fn":container.program(13, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
-    + "\r\n</div>";
+    + "\r\n</div>\r\n\r\n"
+    + ((stack1 = (helpers.ifEquals || (depth0 && depth0.ifEquals) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.page : depth0),"registerRaid",{"name":"ifEquals","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data})) != null ? stack1 : "");
 },"usePartial":true,"useData":true});

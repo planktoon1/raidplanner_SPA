@@ -1,0 +1,9 @@
+<div class="header">    
+    {{#> header }} Something went wrong while trying to load the header {{/header}}
+</div>
+
+{{#ifEquals page "registerRaid" }}  {{> registerRaid }} {{else}}
+{{#ifEquals page "raidList" }}      {{> raidList }}     {{else}}
+{{#ifEquals page "account" }}       {{> account }}      {{else}}
+    <p>Page not found</p>
+{{/ifEquals}}{{/ifEquals}}{{/ifEquals}}
