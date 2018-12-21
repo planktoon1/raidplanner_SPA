@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .page button.subtle {
@@ -246,6 +246,11 @@ h3 {
 /*===================================================
 ----------------------RAID LIST----------------------
 =====================================================*/
+
+.page .raidlistWrapper {
+    margin-block-start: 2rem;
+}
+
 .page button.collapsible {
     display: block;
     background: rgba(0, 0, 0, 0.1);
@@ -256,6 +261,8 @@ h3 {
     min-width: 0;
     padding: 0.4rem 1rem;
     width: 100%;
+    margin: 0 auto;
+    max-width: 910px;
     border-radius: 0.2rem;
     margin-block-end: 0.6rem;
 }

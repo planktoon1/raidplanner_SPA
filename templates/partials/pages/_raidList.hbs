@@ -1,14 +1,14 @@
-<p>Her kan man se en liste af raids</p><br>
-
+<div class="raidlistWrapper">
 {{#each raids}}
     <button class="collapsible">
         <i class="fas fa-caret-down openIcon"></i>
         <h2>{{gym.name}}</h2>
-        <p>{{#if form}} {{form.display_name}} {{else}} Tier {{egg_tier}} egg {{/if}}</p>
-        <p>{{#if form}} {{ends}} {{else}} {{hatches}} {{/if}}</p>
+        <h3>{{#if form}} {{form.display_name}} {{else}} Tier {{egg_tier}} egg {{/if}}</h3>
+        <p>{{#if form}} <i class="far fa-clock"></i> {{ends}} {{else}} <i class="fas fa-hourglass-end"></i> {{hatches}} {{/if}}</p>
 
     </button>
 {{/each}}
+</div>
 
 <button>submit</button>
 <button>ok</button>

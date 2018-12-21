@@ -44,9 +44,9 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 
   return "    <button class=\"collapsible\">\r\n        <i class=\"fas fa-caret-down openIcon\"></i>\r\n        <h2>"
     + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
-    + "</h2>\r\n        <p>"
+    + "</h2>\r\n        <h3>"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
-    + "</p>\r\n        <p>"
+    + "</h3>\r\n        <p>"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
     + "</p>\r\n\r\n    </button>\r\n";
 },"2":function(container,depth0,helpers,partials,data) {
@@ -64,21 +64,21 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 },"6":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return " "
+  return " <i class=\"far fa-clock\"></i> "
     + container.escapeExpression(((helper = (helper = helpers.ends || (depth0 != null ? depth0.ends : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"ends","hash":{},"data":data}) : helper)))
     + " ";
 },"8":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return " "
+  return " <i class=\"fas fa-hourglass-end\"></i> "
     + container.escapeExpression(((helper = (helper = helpers.hatches || (depth0 != null ? depth0.hatches : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"hatches","hash":{},"data":data}) : helper)))
     + " ";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "<p>Her kan man se en liste af raids</p><br>\r\n\r\n"
+  return "<div class=\"raidlistWrapper\">\r\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.raids : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\r\n<button>submit</button>\r\n<button>ok</button>";
+    + "</div>\r\n\r\n<button>submit</button>\r\n<button>ok</button>";
 },"useData":true}));
 
 Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
