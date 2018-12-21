@@ -19,6 +19,35 @@ const createAccount = ({
   }
 }
 
+// ---------------- RAIDS ----------------
+
+const raids = [
+  {
+    gym: {
+      "id":406670,"name":"Switzer Park", "lat":39.525074,"lon":-86.16898
+    },
+    form:null,
+    hatches: timeStamp("2018-12-21T11:01:58.762384Z"),
+    ends: timeStamp("2018-12-21T11:46:58.762384Z"),
+    updated: timeStamp("2018-12-21T10:02:56.500184Z"),
+    egg_tier:5
+  },
+  {
+    gym: {
+      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+    },
+    form:{
+      name:	"piloswine",
+      display_name:	"Piloswine",
+      raid_boss_level:	3
+    },
+    hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
+    ends: timeStamp("2018-12-21T13:18:40.961471Z"),
+    updated: timeStamp("2018-12-21T12:33:59.730605Z"),
+    egg_tier:3
+  }
+];
+
 // -------------- UTILITIES --------------
 
 // Toggles visibility of an element. Designed to be used inline in the html. 
@@ -31,6 +60,12 @@ function toggle(id) {
     element.style.visibility = "hidden";
     element.style.opacity = "0";
   }  
+}
+
+// Change ISO date string into a timestamp we can display in the design (hh:mm)
+function timeStamp(isoString) {
+  const dateString = new Date( isoString).toTimeString().split(' ')[0].split(':');
+  return `${dateString[0]}:${dateString[1]}`;
 }
 
 // Add event listener - takes care of older browsers
@@ -56,11 +91,13 @@ onload = async () => {
   document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
 
   changePageTo({
-    page: "login",
-    header: "Login",
-    subheader: "For at oprette raid grupper, mm..",
-    account: account
+    page: "raidList",
+    header: "Raid List",
+    subheader: `@ ${account.area} - ${account.city}`,
+    account: account,
+    raids
   });
+
 
   
 };
@@ -71,7 +108,7 @@ function registerEventListeners() {
   // ---------- Navigation buttons ----------
   addEvent( // -- Account --
     document.getElementById('btnAccount'), 'click', () => changePageTo({
-      page: "account",
+      page: "login",
       header: "Din profil",
       subheader: "",
       account: account
@@ -92,7 +129,8 @@ function registerEventListeners() {
       page: "raidList",
       header: "Raid List",
       subheader: `@ ${account.area} - ${account.city}`,
-      account: account
+      account: account,
+      raids
     })
   );
 

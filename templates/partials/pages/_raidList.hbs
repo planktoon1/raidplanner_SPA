@@ -1,3 +1,14 @@
 <p>Her kan man se en liste af raids</p><br>
+
+{{#each raids}}
+    <button class="collapsible">
+        <i class="fas fa-caret-down openIcon"></i>
+        <h2>{{gym.name}}</h2>
+        <p>{{#if form}} {{form.display_name}} {{else}} Tier {{egg_tier}} egg {{/if}}</p>
+        <p>{{#if form}} {{ends}} {{else}} {{hatches}} {{/if}}</p>
+
+    </button>
+{{/each}}
+
 <button>submit</button>
 <button>ok</button>

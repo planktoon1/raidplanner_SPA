@@ -244,9 +244,30 @@ h3 {
 }
 
 /*===================================================
---------------------REGISTER RAID--------------------
+----------------------RAID LIST----------------------
 =====================================================*/
+.page button.collapsible {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    min-width: auto;
+    color: black;
+    text-transform: none;
+    text-align: left;
+    min-width: 0;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    margin-block-end: 0.6rem;
+}
 
+.page button.collapsible .openIcon {
+    float: right;
+    display: block;
+    color: var(--shamrock);
+    font-size: 2rem;
+    margin: 0.6rem;
+
+}
 
 /*===================================================
 ---------------------NAVIGATION----------------------
