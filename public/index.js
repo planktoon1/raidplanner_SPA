@@ -48,13 +48,29 @@ const raids = [
   },
   {
     gym: {
-      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+      "id":406671,"name":"Test Gym", "lat":39.525004,"lon":-85.16898
     },
     form:{
       name:	"piloswine",
       display_name:	"Piloswine",
       raid_boss_level:	3
     },
+    groups: [
+      {
+        killTime: timeStamp("2018-12-21T12:33:40.961471Z"),
+        participants: 6,
+        mystic: 3,
+        valor: 3,
+        instinct: 0
+      },
+      {
+        killTime: timeStamp("2018-12-21T12:36:40.961471Z"),
+        participants: 2,
+        mystic: 0,
+        valor: 0,
+        instinct: 2
+      }
+    ],
     hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
     ends: timeStamp("2018-12-21T13:18:40.961471Z"),
     updated: timeStamp("2018-12-21T12:33:59.730605Z"),
