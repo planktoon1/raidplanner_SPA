@@ -44,6 +44,11 @@ h3 {
     font-size: 1.1rem;
 }
 
+hr {
+    border: 1px solid var(--limegreen);
+    border-radius: 1px;
+}
+
 .page button.subtle {
     background: none;
     min-width: auto;
@@ -100,6 +105,10 @@ h3 {
     height: 0;
     width: 0;
 }
+
+.page input[type=time] {
+    max-width: fit-content;
+}
 .checkmark {
     position: absolute;
     top: 0;
@@ -140,6 +149,8 @@ h3 {
     border: solid var(--shamrock);
     border-width: 0 3px 3px 0;
 }
+
+
 
 /*===================================================
 ------------------LOGIN PAGE STYLING-----------------
@@ -286,6 +297,8 @@ h3 {
     content: "\f0d8";
 }
 
+
+
 .page .content {
     box-sizing: border-box;
     overflow: hidden;
@@ -301,8 +314,19 @@ h3 {
     border-radius: 0.2rem;
 }
 
-.page .content p { 
-    margin: 2rem 0;
+.page .content button { 
+    margin: auto 0;
+}
+
+.page .content .createGroupWrapper, .page .content .raidGroup {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+
+.page .timePicker {
+    margin: auto 0;
 }
 
 /*===================================================

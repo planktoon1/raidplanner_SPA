@@ -40,16 +40,20 @@ Handlebars.registerPartial("login", Handlebars.template({"compiler":[7,">= 4.0.0
 },"useData":true}));
 
 Handlebars.registerPartial("raidList", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=depth0 != null ? depth0 : {};
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
 
   return "    <button class=\"collapsible\">\r\n        <h2>"
-    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
     + "</h2>\r\n        <h3>"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers["if"].call(alias3,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
     + "</h3>\r\n        <p>"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + "</p>\r\n\r\n    </button>\r\n    <div class=\"content\">\r\n        <p>test tekst her test tekst her test tekst her test tekst her </p>\r\n"
-    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.groups : depth0),{"name":"each","hash":{},"fn":container.program(10, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers["if"].call(alias3,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
+    + "</p>\r\n\r\n    </button>\r\n    <div class=\"content\">\r\n        <div class=\"createGroupWrapper\">\r\n            <div class=\"timePicker\">\r\n                <label class=\"timePicker\" for=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
+    + "\">Tidspunkt: </label>\r\n                <input type=\"time\" id=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
+    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\" required>\r\n            </div>\r\n            <button class=\"createGroup\">Opret gruppe</button>\r\n        </div>\r\n"
+    + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.groups : depth0),{"name":"each","hash":{},"fn":container.program(10, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\r\n";
 },"2":function(container,depth0,helpers,partials,data) {
     var stack1;
@@ -78,9 +82,9 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 },"10":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <hr><p>"
+  return "            <hr>\r\n            <div class=\"raidGroup\">\r\n                <p>"
     + container.escapeExpression(((helper = (helper = helpers.killTime || (depth0 != null ? depth0.killTime : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"killTime","hash":{},"data":data}) : helper)))
-    + "</p>\r\n";
+    + "</p>\r\n            </div>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 

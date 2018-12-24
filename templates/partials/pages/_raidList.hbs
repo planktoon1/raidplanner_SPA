@@ -7,9 +7,18 @@
 
     </button>
     <div class="content">
-        <p>test tekst her test tekst her test tekst her test tekst her </p>
+        <div class="createGroupWrapper">
+            <div class="timePicker">
+                <label class="timePicker" for="{{gym.name}}">Tidspunkt: </label>
+                <input type="time" id="{{gym.name}}"class="timePicker" name="appt" min="06:00" max="21:00" value="14:30" pattern="[0-9]{2}:[0-9]{2}" required>
+            </div>
+            <button class="createGroup">Opret gruppe</button>
+        </div>
         {{#each groups}}
-            <hr><p>{{killTime}}</p>
+            <hr>
+            <div class="raidGroup">
+                <p>{{killTime}}</p>
+            </div>
         {{/each}}
     </div>
 {{/each}}
