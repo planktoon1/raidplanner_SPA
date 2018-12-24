@@ -80,6 +80,8 @@ function addEvent(element, evnt, funct){
 function changePageTo(context) {
   document.getElementById('page').innerHTML = raidplanner.Templates['./templates/page.hbs'](context);
   registerEventListeners();
+  const coll = document.getElementsByClassName("collapsible");
+  if (coll ) addCollapsibleBehaviour(coll);
 }
 
 // ----------- INITIALIZATION ------------
@@ -98,9 +100,24 @@ onload = async () => {
     raids
   });
 
-
-  
 };
+
+
+function addCollapsibleBehaviour(coll) {
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+      
+      
+    });
+  }
+}
 
 // Adds eventlisteners to buttons, and other functionalities
 function registerEventListeners() {

@@ -42,13 +42,13 @@ Handlebars.registerPartial("login", Handlebars.template({"compiler":[7,">= 4.0.0
 Handlebars.registerPartial("raidList", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : {};
 
-  return "    <button class=\"collapsible\">\r\n        <i class=\"fas fa-caret-down openIcon\"></i>\r\n        <h2>"
+  return "    <button class=\"collapsible\">\r\n        <h2>"
     + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
     + "</h2>\r\n        <h3>"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
     + "</h3>\r\n        <p>"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.form : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + "</p>\r\n\r\n    </button>\r\n";
+    + "</p>\r\n\r\n    </button>\r\n    <div class=\"content\"><p>test tekst her test tekst her test tekst her test tekst her </p></div>\r\n";
 },"2":function(container,depth0,helpers,partials,data) {
     var stack1;
 

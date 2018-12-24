@@ -252,6 +252,7 @@ h3 {
 }
 
 .page button.collapsible {
+    position: relative;
     display: block;
     background: rgba(0, 0, 0, 0.1);
     min-width: auto;
@@ -264,16 +265,43 @@ h3 {
     margin: 0 auto;
     max-width: 910px;
     border-radius: 0.2rem;
-    margin-block-end: 0.6rem;
+    margin-block-start: 0.6rem;
 }
 
-.page button.collapsible .openIcon {
-    float: right;
+.page button.collapsible::after {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: block;
     color: var(--shamrock);
     font-size: 2rem;
-    margin: 0.6rem;
+    margin: 1rem; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d7";
+}
 
+.page button.collapsible.active::after {
+    content: "\f0d8";
+}
+
+.page .content {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 1rem;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    background: rgba(0, 0, 0, 0.05);
+    color: black;
+    text-align: left;
+    min-width: auto;
+    margin: 0 auto;
+    max-width: 910px;
+    border-radius: 0.2rem;
+}
+
+.page .content p { 
+    margin: 2rem 0;
 }
 
 /*===================================================
