@@ -45,6 +45,62 @@ const raids = [
     ends: timeStamp("2018-12-21T13:18:40.961471Z"),
     updated: timeStamp("2018-12-21T12:33:59.730605Z"),
     egg_tier:3
+  },
+  {
+    gym: {
+      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+    },
+    form:{
+      name:	"piloswine",
+      display_name:	"Piloswine",
+      raid_boss_level:	3
+    },
+    hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
+    ends: timeStamp("2018-12-21T13:18:40.961471Z"),
+    updated: timeStamp("2018-12-21T12:33:59.730605Z"),
+    egg_tier:3
+  },
+  {
+    gym: {
+      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+    },
+    form:{
+      name:	"piloswine",
+      display_name:	"Piloswine",
+      raid_boss_level:	3
+    },
+    hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
+    ends: timeStamp("2018-12-21T13:18:40.961471Z"),
+    updated: timeStamp("2018-12-21T12:33:59.730605Z"),
+    egg_tier:3
+  },
+  {
+    gym: {
+      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+    },
+    form:{
+      name:	"piloswine",
+      display_name:	"Piloswine",
+      raid_boss_level:	3
+    },
+    hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
+    ends: timeStamp("2018-12-21T13:18:40.961471Z"),
+    updated: timeStamp("2018-12-21T12:33:59.730605Z"),
+    egg_tier:3
+  },
+  {
+    gym: {
+      "id":406671,"name":"Viby Kirke", "lat":39.525004,"lon":-85.16898
+    },
+    form:{
+      name:	"piloswine",
+      display_name:	"Piloswine",
+      raid_boss_level:	3
+    },
+    hatches: timeStamp("2018-12-21T12:33:40.961471Z"),
+    ends: timeStamp("2018-12-21T13:18:40.961471Z"),
+    updated: timeStamp("2018-12-21T12:33:59.730605Z"),
+    egg_tier:3
   }
 ];
 

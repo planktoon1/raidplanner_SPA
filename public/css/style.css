@@ -249,6 +249,11 @@ h3 {
 
 .page .raidlistWrapper {
     margin-block-start: 2rem;
+    overflow-y: auto;
+    max-height: 70vh;
+    min-height: 70vh;   
+    margin: 1rem auto;
+    max-width: 910px;
 }
 
 .page button.collapsible {
@@ -259,11 +264,7 @@ h3 {
     color: black;
     text-transform: none;
     text-align: left;
-    min-width: 0;
-    padding: 0.4rem 1rem;
     width: 100%;
-    margin: 0 auto;
-    max-width: 910px;
     border-radius: 0.2rem;
     margin-block-start: 0.6rem;
 }
