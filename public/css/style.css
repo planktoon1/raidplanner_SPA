@@ -302,7 +302,7 @@ hr {
 .page .content {
     box-sizing: border-box;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 1.2rem;
     max-height: 0;
     transition: max-height 0.2s ease-out;
     background: rgba(0, 0, 0, 0.05);

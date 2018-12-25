@@ -82,9 +82,9 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 },"10":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <hr>\r\n            <div class=\"raidGroup\">\r\n                <p>"
+  return "            <hr>\r\n            <div class=\"raidGroup\">\r\n                <p>\r\n                    <i class=\"fas fa-fist-raised\"></i> "
     + container.escapeExpression(((helper = (helper = helpers.killTime || (depth0 != null ? depth0.killTime : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"killTime","hash":{},"data":data}) : helper)))
-    + "</p>\r\n            </div>\r\n";
+    + "\r\n                </p>\r\n            </div>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
