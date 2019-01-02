@@ -324,6 +324,24 @@ hr {
     padding: 1rem 0;
 }
 
+.page .teamicon {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 1.6rem;
+}
+
+.page .teamicon.total {
+    margin-left: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), transparent);
+}
+.page .teamicon.mystic {background: linear-gradient(180deg, rgba(0, 0, 255, 0.4), transparent);}
+.page .teamicon.instinct {background: linear-gradient(180deg, rgba(255, 255, 0, 0.8), transparent);}
+.page .teamicon.valor {background: linear-gradient(180deg, rgba(255, 0, 0, 0.4), transparent);}
 
 .page .timePicker {
     margin: auto 0;

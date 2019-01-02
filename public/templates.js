@@ -52,7 +52,7 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
     + "\">Tidspunkt: </label>\r\n                <input type=\"time\" id=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
-    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\" required>\r\n            </div>\r\n            <button class=\"createGroup\">Opret gruppe</button>\r\n        </div>\r\n"
+    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\" required>\r\n            </div>\r\n            <button class=\"createGroup\">Ny gruppe</button>\r\n        </div>\r\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.groups : depth0),{"name":"each","hash":{},"fn":container.program(10, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\r\n";
 },"2":function(container,depth0,helpers,partials,data) {
@@ -80,11 +80,41 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
     + container.escapeExpression(((helper = (helper = helpers.hatches || (depth0 != null ? depth0.hatches : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"hatches","hash":{},"data":data}) : helper)))
     + " ";
 },"10":function(container,depth0,helpers,partials,data) {
-    var helper;
+    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
   return "            <hr>\r\n            <div class=\"raidGroup\">\r\n                <p>\r\n                    <i class=\"fas fa-fist-raised\"></i> "
-    + container.escapeExpression(((helper = (helper = helpers.killTime || (depth0 != null ? depth0.killTime : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"killTime","hash":{},"data":data}) : helper)))
-    + "\r\n                </p>\r\n            </div>\r\n";
+    + alias4(((helper = (helper = helpers.killTime || (depth0 != null ? depth0.killTime : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"killTime","hash":{},"data":data}) : helper)))
+    + " \r\n                    <i class=\"teamicon total\">"
+    + alias4(((helper = (helper = helpers.participants || (depth0 != null ? depth0.participants : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"participants","hash":{},"data":data}) : helper)))
+    + "</i> "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.participants : depth0),{"name":"if","hash":{},"fn":container.program(11, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n                    "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.mystic : depth0),{"name":"if","hash":{},"fn":container.program(13, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n                    "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.instinct : depth0),{"name":"if","hash":{},"fn":container.program(15, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "  \r\n                    "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.valor : depth0),{"name":"if","hash":{},"fn":container.program(17, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + " \r\n                </p>\r\n\r\n                <p>\r\n                    <button>Deltag</button>\r\n                </p>\r\n            </div>\r\n";
+},"11":function(container,depth0,helpers,partials,data) {
+    return " | ";
+},"13":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return " <i class=\"teamicon mystic\">"
+    + container.escapeExpression(((helper = (helper = helpers.mystic || (depth0 != null ? depth0.mystic : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"mystic","hash":{},"data":data}) : helper)))
+    + "</i>  ";
+},"15":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return " <i class=\"teamicon instinct\">"
+    + container.escapeExpression(((helper = (helper = helpers.instinct || (depth0 != null ? depth0.instinct : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"instinct","hash":{},"data":data}) : helper)))
+    + "</i>  ";
+},"17":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return " <i class=\"teamicon valor\">"
+    + container.escapeExpression(((helper = (helper = helpers.valor || (depth0 != null ? depth0.valor : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"valor","hash":{},"data":data}) : helper)))
+    + "</i>  ";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
