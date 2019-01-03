@@ -1,5 +1,17 @@
 <div class="gridWrapper">
     <div class = "registerRaidBox">
-        <button>test</button>
+        <div class="gym"><input type="text" placeholder="Gym i {{account.area}}"><i class="fas fa-monument icon"></i></div>
+        <div class="hatchedOrNot">
+            <label class="container">Gym allerede hatched <input type="checkbox"><span class="checkmark" id="alreadyHatched"></span></label>
+        </div>
+        <div class="notHatchedGym">
+            <label class="timePicker" for="{{gym.name}}">Hatch tidspunkt: </label>
+                <input type="time" id="{{gym.name}}"class="timePicker" name="appt" min="06:00" max="21:00" value="14:30" pattern="[0-9]{2}:[0-9]{2}">
+        </div>
+        <div class="hatchedGym">
+
+        </div>
+
+        <button id="submitRaid">Opret Raid</button>
     </div>
 </div>

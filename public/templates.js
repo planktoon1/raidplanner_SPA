@@ -124,7 +124,15 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 },"useData":true}));
 
 Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"gridWrapper\">\r\n    <div class = \"registerRaidBox\">\r\n        <button>test</button>\r\n    </div>\r\n</div>";
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<div class=\"gridWrapper\">\r\n    <div class = \"registerRaidBox\">\r\n        <div class=\"gym\"><input type=\"text\" placeholder=\"Gym i "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.account : depth0)) != null ? stack1.area : stack1), depth0))
+    + "\"><i class=\"fas fa-monument icon\"></i></div>\r\n        <div class=\"hatchedOrNot\">\r\n            <label class=\"container\">Gym allerede hatched <input type=\"checkbox\"><span class=\"checkmark\" id=\"alreadyHatched\"></span></label>\r\n        </div>\r\n        <div class=\"notHatchedGym\">\r\n            <label class=\"timePicker\" for=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
+    + "\">Hatch tidspunkt: </label>\r\n                <input type=\"time\" id=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
+    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\">\r\n        </div>\r\n        <div class=\"hatchedGym\">\r\n\r\n        </div>\r\n\r\n        <button id=\"submitRaid\">Opret Raid</button>\r\n    </div>\r\n</div>";
 },"useData":true}));
 
 this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {

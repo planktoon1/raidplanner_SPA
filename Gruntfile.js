@@ -25,6 +25,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-chokidar');
 
-    grunt.registerTask('default', ['handlebars']);
+    grunt.registerTask('default', ['grunt-chokidar']);
 
 }

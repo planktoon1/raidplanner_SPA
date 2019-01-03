@@ -165,11 +165,10 @@ onload = async () => {
   document.getElementById('app').innerHTML = raidplanner.Templates['./templates/index.hbs']();
 
   changePageTo({
-    page: "raidList",
-    header: "Raid List",
+    page: "registerRaid",
+    header: "Register Raid",
     subheader: `@ ${account.area} - ${account.city}`,
-    account: account,
-    raids
+    account: account
   });
 
 };
