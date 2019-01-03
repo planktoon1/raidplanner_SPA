@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.3",
+    "grunt-chokidar": "^1.0.1",
     "grunt-contrib-handlebars": "^1.0.0",
     "nodemon": "^1.18.4"
   }

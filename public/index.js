@@ -58,10 +58,10 @@ const raids = [
     groups: [
       {
         killTime: timeStamp("2018-12-21T12:33:40.961471Z"),
-        participants: 6,
+        participants: 7,
         mystic: 3,
         valor: 3,
-        instinct: 0
+        instinct: 1
       },
       {
         killTime: timeStamp("2018-12-21T12:36:40.961471Z"),

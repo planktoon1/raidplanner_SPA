@@ -155,13 +155,13 @@ hr {
 /*===================================================
 ------------------LOGIN PAGE STYLING-----------------
 =====================================================*/
-.loginWrapper {
+.gridWrapper {
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 400px) 1fr;
-    grid-template-rows: 5rem auto 2fr;
+    grid-template-rows: 2rem auto 1fr;
 }
 
-.loginBox {
+.loginBox, .registerRaidBox {
     margin: auto;
     position: relative;
     grid-row: 2/3;
@@ -169,12 +169,16 @@ hr {
     display: grid;
     grid-template-columns: auto;
     padding: 2rem;
-    padding-top: 5rem;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     grid-gap: 0.8rem;
     width: 100%;
     box-sizing:border-box;
+}
+
+.loginBox {
+    padding-top: 5rem;
+    margin-block-start: 3rem;
 }
 
 .loginBox::before {
@@ -297,8 +301,6 @@ hr {
     content: "\f0d8";
 }
 
-
-
 .page .content {
     box-sizing: border-box;
     overflow: hidden;
@@ -321,13 +323,14 @@ hr {
 .page .content .createGroupWrapper, .page .content .raidGroup {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 0;
 }
 
 .page .teamicon {
     display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
     text-align: center;
     line-height: 1.6rem;
     text-transform: uppercase;

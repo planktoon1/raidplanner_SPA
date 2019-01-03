@@ -36,7 +36,7 @@ Handlebars.registerPartial("account", Handlebars.template({"1":function(containe
 },"useData":true}));
 
 Handlebars.registerPartial("login", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"loginWrapper\">\r\n    <div class=\"loginBox\">\r\n        <div class=\"username\"><input type=\"text\" placeholder=\"Brugernavn\"><i class=\"fas fa-user icon\"></i></div>\r\n        <div class=\"password\"><input type=\"text\" placeholder=\"Adgangskode\"><i class=\"fas fa-lock icon\"></i></div>\r\n        <button>Login</button>\r\n        <div>\r\n            <div class=\"rememberMe\">\r\n                <label class=\"container\">Husk mig <input type=\"checkbox\"><span class=\"checkmark\" id=\"rememberMe\"></span> </label>\r\n            </div>\r\n            <button class=\"subtle forgotpass\">Glemt kodeord?</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"registerAccount\">\r\n        <p>Har du ikke en bruger ? <button class=\"subtle\">OPRET HER</button></p>\r\n    </div>\r\n</div>";
+    return "<div class=\"gridWrapper\">\r\n    <div class=\"loginBox\">\r\n        <div class=\"username\"><input type=\"text\" placeholder=\"Brugernavn\"><i class=\"fas fa-user icon\"></i></div>\r\n        <div class=\"password\"><input type=\"text\" placeholder=\"Adgangskode\"><i class=\"fas fa-lock icon\"></i></div>\r\n        <button>Login</button>\r\n        <div>\r\n            <div class=\"rememberMe\">\r\n                <label class=\"container\">Husk mig <input type=\"checkbox\"><span class=\"checkmark\" id=\"rememberMe\"></span> </label>\r\n            </div>\r\n            <button class=\"subtle forgotpass\">Glemt kodeord?</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"registerAccount\">\r\n        <p>Har du ikke en bruger ? <button class=\"subtle\">OPRET HER</button></p>\r\n    </div>\r\n</div>";
 },"useData":true}));
 
 Handlebars.registerPartial("raidList", Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
@@ -124,7 +124,7 @@ Handlebars.registerPartial("raidList", Handlebars.template({"1":function(contain
 },"useData":true}));
 
 Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<p>Her kan man registrerer raids</p><br>\r\n<button>submit</button>";
+    return "<div class=\"gridWrapper\">\r\n    <div class = \"registerRaidBox\">\r\n        <button>test</button>\r\n    </div>\r\n</div>";
 },"useData":true}));
 
 this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
