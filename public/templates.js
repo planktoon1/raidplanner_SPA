@@ -128,11 +128,11 @@ Handlebars.registerPartial("registerRaid", Handlebars.template({"compiler":[7,">
 
   return "<div class=\"gridWrapper\">\r\n    <div class = \"registerRaidBox\">\r\n        <div class=\"gym\"><input type=\"text\" placeholder=\"Gym i "
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.account : depth0)) != null ? stack1.area : stack1), depth0))
-    + "\"><i class=\"fas fa-monument icon\"></i></div>\r\n        <div class=\"hatchedOrNot\">\r\n            <label class=\"container\">Gym allerede hatched <input type=\"checkbox\"><span class=\"checkmark\" id=\"alreadyHatched\"></span></label>\r\n        </div>\r\n        <div class=\"notHatchedGym\">\r\n            <label class=\"timePicker\" for=\""
+    + "\"><i class=\"fas fa-monument icon\"></i></div>\r\n        <div class=\"hatchedOrNot\">\r\n            <label class=\"container\">Gym allerede hatched <input type=\"checkbox\" onclick=\"toggle('notHatchedGym', 'hatchedGym')\"><span class=\"checkmark\" id=\"alreadyHatched\"></span></label>\r\n        </div>\r\n        <div id=\"notHatchedGym\">\r\n            <p class=\"notHatchedGym\">\r\n                <label class=\"timePicker\" for=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
     + "\">Hatch tidspunkt: </label>\r\n                <input type=\"time\" id=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.gym : depth0)) != null ? stack1.name : stack1), depth0))
-    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\">\r\n        </div>\r\n        <div class=\"hatchedGym\">\r\n\r\n        </div>\r\n\r\n        <button id=\"submitRaid\">Opret Raid</button>\r\n    </div>\r\n</div>";
+    + "\"class=\"timePicker\" name=\"appt\" min=\"06:00\" max=\"21:00\" value=\"14:30\" pattern=\"[0-9]{2}:[0-9]{2}\">\r\n            </p>\r\n            <p class=\"notHatchedGym\">\r\n                Raid tier: <select>\r\n                    <option value=\"tier5\">Tier 5</option>\r\n                    <option value=\"tier4\">Tier 4</option>\r\n                    <option value=\"tier3\">Tier 3</option>\r\n                    <option value=\"tier2\">Tier 2</option>\r\n                    <option value=\"tier1\">Tier 1</option>\r\n                </select>\r\n            </p>\r\n        </div>\r\n\r\n        <div id=\"hatchedGym\">\r\n            <button>test</button>\r\n        </div>\r\n\r\n        <button id=\"submitRaid\">Opret Raid</button>\r\n    </div>\r\n</div>";
 },"useData":true}));
 
 this["raidplanner"]["Templates"]["./templates/index.hbs"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {

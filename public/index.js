@@ -123,15 +123,19 @@ const raids = [
 // -------------- UTILITIES --------------
 
 // Toggles visibility of an element. Designed to be used inline in the html. 
-function toggle(id) {
-  const element = document.getElementById(id);
-  if (!element.style.opacity || element.style.opacity === "0" ) {
-    element.style.visibility = "visible";
-    element.style.opacity = "1";
-  } else {
-    element.style.visibility = "hidden";
-    element.style.opacity = "0";
-  }  
+function toggle(...ids) {
+    for (id of ids) {
+    const element = document.getElementById(id);
+    const currentOpacity = element.currentStyle ? element.currentStyle.opacity : getComputedStyle(element, null).opacity;
+    
+    if ( element.style.opacity === "0" || currentOpacity === "0" ) {
+      element.style.visibility = "visible";
+      element.style.opacity = "1";
+    } else {
+      element.style.visibility = "hidden";
+      element.style.opacity = "0";
+    } 
+  } 
 }
 
 // Change ISO date string into a timestamp we can display in the design (hh:mm)
