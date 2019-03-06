@@ -2,6 +2,9 @@
   "version": "1.0.0",
   "description": "A raidplanner for the game Pokemon Go",
   "main": "index.js",
+  "scripts": {
+    "start": "./app.js"
+  },
   "author": "Frederik OE",
   "license": "ISC",
   "dependencies": {
