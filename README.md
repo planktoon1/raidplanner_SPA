@@ -1,4 +1,5 @@
 # Raid Planner for Pokemon Go
+Demo: https://aqueous-cliffs-38227.herokuapp.com/
 This is the my second attempt at making a Raid planning application for the popular mobile game 'Pokemon Go'
 This project was **never finished**. A large part of the frontend design was finished, but i moved on to other things before making the API
 ##### Project details
